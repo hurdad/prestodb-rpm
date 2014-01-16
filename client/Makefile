@@ -1,9 +1,9 @@
 # Presto CLI
 SHELL := /bin/bash 
 version = 0.57
-name = presto-cli
+name = presto
 full_name = $(name)-$(version)
-download_url = "http://search.maven.org/remotecontent?filepath=com/facebook/presto/$(name)/$(version)/$(full_name)-executable.jar"
+download_url = "http://search.maven.org/remotecontent?filepath=com/facebook/presto/$(name)-cli/$(version)/$(name)-cli-$(version)-executable.jar"
 
 all: rpm
 

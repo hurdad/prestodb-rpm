@@ -1,4 +1,4 @@
-Name:           presto-cli
+Name:           presto
 Version:        %{PRESTO_VERSION}
 Release:        1%{?dist}
 Summary:        PrestoDB CLI
@@ -20,15 +20,18 @@ PrestoDB CLI Tool
 %install
 %{__rm} -rf %{buildroot}
 %{__mkdir} -p %{buildroot}%{_bindir}
-%{__install} -m 755 %{_topdir}/tmp/presto-cli %{buildroot}%{_bindir}
+%{__install} -m 755 %{_topdir}/tmp/presto %{buildroot}%{_bindir}
 
 %clean
 %{__rm} -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%{_bindir}/presto-cli
+%{_bindir}/presto
 
 %changelog
+* Wed Jan 16 2014 Alexander Hurd <hurdad@gmail.com> 1.0.1-2
+- Renaming from presto-cli to presto
+
 * Wed Jan 1 2014 Alexander Hurd <hurdad@gmail.com> 1.0.1-1
 - Initial specfile writeup.
