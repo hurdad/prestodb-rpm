@@ -1,6 +1,6 @@
 # Master MakeFile
 
-SUBDIRS = client server discovery
+SUBDIRS = client server discovery jdbc
 
 all: $(SUBDIRS)
 
