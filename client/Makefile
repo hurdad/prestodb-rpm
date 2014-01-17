@@ -35,4 +35,4 @@ rpm: download
 	  --define "_specdir %{_topdir}" \
 	  --define "_sourcedir  %{_topdir}/rpmbuild/SOURCES" \
 	  --define "PRESTO_VERSION $(version)" \
-	  -ba presto-cli.spec
+	  -ba presto.spec
