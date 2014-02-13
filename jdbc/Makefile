@@ -1,6 +1,6 @@
 # Presto JDBC
 SHELL := /bin/bash 
-version = 0.59
+version = 0.60
 name = presto-jdbc
 full_name = $(name)-$(version)
 download_url = "http://search.maven.org/remotecontent?filepath=com/facebook/presto/$(name)/$(version)/$(full_name)-standalone.jar"
