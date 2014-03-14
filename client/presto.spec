@@ -1,13 +1,12 @@
 Name:           presto
 Version:        %{PRESTO_VERSION}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        PrestoDB CLI
 Group:		System Environment/Libraries        
 License:        ASL 2.0
 URL:            http://prestodb.io/       
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
-Requires:       java-1.7.0
 Packager:       Alexander Hurd <hurdad@gmail.com>
 
 %description

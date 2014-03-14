@@ -1,13 +1,12 @@
 Name:           presto-discovery-server
 Version:        %{VERSION}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Presto Discovery Server
 Group:		System Environment/Daemons       
 License:        ASL 2.0
 URL:            http://prestodb.io/       
 Source0:        discovery-server-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires:       java-1.7.0
 Requires:       util-linux-ng
 Packager:       Alexander Hurd <hurdad@gmail.com>
 
