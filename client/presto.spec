@@ -1,6 +1,6 @@
 Name:           presto
 Version:        %{PRESTO_VERSION}
-Release:        2%{?dist}
+Release:        1%{?dist}
 Summary:        PrestoDB CLI
 Group:		System Environment/Libraries        
 License:        ASL 2.0

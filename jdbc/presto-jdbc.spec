@@ -1,6 +1,6 @@
 Name:           presto-jdbc
 Version:        %{PRESTO_VERSION}
-Release:        2%{?dist}
+Release:        1%{?dist}
 Summary:        PrestoDB JDBC Driver
 Group:		System Environment/Libraries        
 License:        ASL 2.0
