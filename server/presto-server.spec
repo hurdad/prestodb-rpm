@@ -8,7 +8,6 @@ URL:            http://prestodb.io/
 Source0:        presto-server-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires:       util-linux-ng
-Requires:       redhat-lsb
 Packager:       Alexander Hurd <hurdad@gmail.com>
 
 %description
