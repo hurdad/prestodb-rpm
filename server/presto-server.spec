@@ -13,6 +13,8 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires:       util-linux-ng
 Packager:       Alexander Hurd <hurdad@gmail.com>
 
+AutoReqProv: no
+
 %description
 Presto DB Server
 
