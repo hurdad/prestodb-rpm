@@ -1,7 +1,10 @@
+%define debug_package %{nil}
+%define __jar_repack %{nil}
+
 Name:           presto-server
 Version:        %{VERSION}
 Release:        1%{?dist}
-Summary:        Presto Server
+Summary:        Presto DB Server
 Group:		System Environment/Daemons       
 License:        ASL 2.0
 URL:            http://prestodb.io/       
@@ -11,7 +14,7 @@ Requires:       util-linux-ng
 Packager:       Alexander Hurd <hurdad@gmail.com>
 
 %description
-PrestoDB Server
+Presto DB Server
 
 %prep
 %setup -q -n presto-server-%{VERSION}

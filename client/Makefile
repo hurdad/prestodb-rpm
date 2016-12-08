@@ -1,7 +1,7 @@
 # Presto CLI
 SHELL := /bin/bash 
-version = 0.69
-name = presto
+version = 0.159
+name = presto-cli
 full_name = $(name)-$(version)
 download_url = "http://search.maven.org/remotecontent?filepath=com/facebook/presto/$(name)-cli/$(version)/$(name)-cli-$(version)-executable.jar"
 
@@ -22,8 +22,8 @@ mkdir: clean
 
 download: mkdir
 	cd tmp; \
-	curl -o $(name) $(download_url); \
-	chmod a+x $(name)
+	curl -L -o presto $(download_url); \
+	chmod a+x presto
 
 rpm: download
 	rpmbuild $(RPM_OPTS) \
@@ -35,4 +35,4 @@ rpm: download
 	  --define "_specdir %{_topdir}" \
 	  --define "_sourcedir  %{_topdir}/rpmbuild/SOURCES" \
 	  --define "PRESTO_VERSION $(version)" \
-	  -ba presto.spec
+	  -ba $(name).spec

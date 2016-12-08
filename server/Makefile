@@ -1,6 +1,6 @@
 # Presto Server
 SHELL := /bin/bash 
-version = 0.69
+version = 0.159
 name = presto-server
 full_name = $(name)-$(version)
 download_url = "http://search.maven.org/remotecontent?filepath=com/facebook/presto/$(name)/$(version)/$(full_name).tar.gz"
@@ -19,7 +19,7 @@ mkdir: clean
 	mkdir -p rpmbuild/SRPMS
 
 download: mkdir
-	curl -o rpmbuild/SOURCES/$(full_name).tar.gz $(download_url); 
+	curl -L -o rpmbuild/SOURCES/$(full_name).tar.gz $(download_url); 
 
 rpm: download
 	rpmbuild $(RPM_OPTS) \
@@ -31,4 +31,4 @@ rpm: download
 	  --define "_specdir %{_topdir}" \
 	  --define "_sourcedir  %{_topdir}/rpmbuild/SOURCES" \
 	  --define "VERSION $(version)" \
-	  -ba presto-server.spec
+	  -ba $(name).spec

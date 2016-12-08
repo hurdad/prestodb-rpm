@@ -1,6 +1,6 @@
 # Presto JDBC
 SHELL := /bin/bash 
-version = 0.69
+version = 0.159
 name = presto-jdbc
 full_name = $(name)-$(version)
 download_url = "http://search.maven.org/remotecontent?filepath=com/facebook/presto/$(name)/$(version)/$(full_name).jar"
@@ -22,7 +22,7 @@ mkdir: clean
 
 download: mkdir
 	cd tmp; \
-	curl -o $(full_name)-standalone.jar $(download_url); \
+	curl -L -o $(full_name)-standalone.jar $(download_url); \
 	
 
 rpm: download
@@ -35,4 +35,4 @@ rpm: download
 	  --define "_specdir %{_topdir}" \
 	  --define "_sourcedir  %{_topdir}/rpmbuild/SOURCES" \
 	  --define "PRESTO_VERSION $(version)" \
-	  -ba presto-jdbc.spec
+	  -ba $(name).spec
